@@ -1,0 +1,16 @@
+[
+{
+  "modid": "noobteam",
+  "name": "NoobTeam",
+  "description": "Red我真的好喜欢你啊！！！",
+  "version": "${version}",
+  "mcversion": "${mcversion}",
+  "url": "",
+  "updateUrl": "",
+  "authorList": ["herry", "Rdamancy"],
+  "credits": "The Forge and FML guys, for making this example",
+  "logoFile": "",
+  "screenshots": [],
+  "dependencies": []
+}
+]

@@ -1,0 +1,112 @@
+---- Minecraft Crash Report ----
+// Uh... Did I do that?
+
+Time: 22-8-2 ÏÂÎç6:46
+Description: Unexpected error
+
+java.lang.IllegalArgumentException: bound must be positive
+	at java.util.Random.nextInt(Random.java:388)
+	at noob.NoobTeam.modules.Combat.Reach.onTick(Reach.java:67)
+	at net.minecraftforge.fml.common.eventhandler.ASMEventHandler_9_Reach_onTick_ClientTickEvent.invoke(.dynamic)
+	at net.minecraftforge.fml.common.eventhandler.ASMEventHandler.invoke(ASMEventHandler.java:49)
+	at net.minecraftforge.fml.common.eventhandler.EventBus.post(EventBus.java:140)
+	at net.minecraftforge.fml.common.FMLCommonHandler.onPostClientTick(FMLCommonHandler.java:336)
+	at net.minecraft.client.Minecraft.runTick(Minecraft.java:2238)
+	at net.minecraft.client.Minecraft.runGameLoop(Minecraft.java:1080)
+	at net.minecraft.client.Minecraft.run(Minecraft.java:380)
+	at net.minecraft.client.main.Main.main(Main.java:116)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at net.minecraft.launchwrapper.Launch.launch(Launch.java:135)
+	at net.minecraft.launchwrapper.Launch.main(Launch.java:28)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at net.minecraftforge.gradle.GradleStartCommon.launch(GradleStartCommon.java:97)
+	at GradleStart.main(GradleStart.java:26)
+
+
+A detailed walkthrough of the error, its code path and all known details is as follows:
+---------------------------------------------------------------------------------------
+
+-- Head --
+Stacktrace:
+	at java.util.Random.nextInt(Random.java:388)
+	at noob.NoobTeam.modules.Combat.Reach.onTick(Reach.java:67)
+	at net.minecraftforge.fml.common.eventhandler.ASMEventHandler_9_Reach_onTick_ClientTickEvent.invoke(.dynamic)
+	at net.minecraftforge.fml.common.eventhandler.ASMEventHandler.invoke(ASMEventHandler.java:49)
+	at net.minecraftforge.fml.common.eventhandler.EventBus.post(EventBus.java:140)
+	at net.minecraftforge.fml.common.FMLCommonHandler.onPostClientTick(FMLCommonHandler.java:336)
+
+-- Affected level --
+Details:
+	Level name: MpServer
+	All players: 1 total; [EntityPlayerSP['Player857'/307, l='MpServer', x=-261.29, y=68.00, z=218.50]]
+	Chunk stats: MultiplayerChunkCache: 169, 169
+	Level seed: 0
+	Level generator: ID 00 - default, ver 1. Features enabled: false
+	Level generator options: 
+	Level spawn location: -248.00,64.00,244.00 - World: (-248,64,244), Chunk: (at 8,4,4 in -16,15; contains blocks -256,0,240 to -241,255,255), Region: (-1,0; contains chunks -32,0 to -1,31, blocks -512,0,0 to -1,255,511)
+	Level time: 24683 game time, 9806 day time
+	Level dimension: 0
+	Level storage version: 0x00000 - Unknown?
+	Level weather: Rain time: 0 (now: false), thunder time: 0 (now: false)
+	Level game mode: Game mode: creative (ID 1). Hardcore: false. Cheats: false
+	Forced entities: 55 total; [EntitySkeleton['Skeleton'/384, l='MpServer', x=-211.50, y=21.00, z=159.50], EntitySkeleton['Skeleton'/131, l='MpServer', x=-325.16, y=57.00, z=245.59], EntityBat['Bat'/134, l='MpServer', x=-288.34, y=31.10, z=141.66], EntityCreeper['Creeper'/135, l='MpServer', x=-300.53, y=13.00, z=205.94], EntitySkeleton['Skeleton'/136, l='MpServer', x=-291.50, y=17.00, z=211.50], EntitySheep['Sheep'/137, l='MpServer', x=-291.84, y=66.00, z=248.16], EntitySkeleton['Skeleton'/523, l='MpServer', x=-288.53, y=35.00, z=269.88], EntityWitch['Witch'/147, l='MpServer', x=-277.50, y=15.00, z=154.50], EntitySheep['Sheep'/148, l='MpServer', x=-281.47, y=64.00, z=252.19], EntitySheep['Sheep'/149, l='MpServer', x=-280.66, y=67.00, z=251.19], EntitySheep['Sheep'/150, l='MpServer', x=-281.81, y=68.00, z=268.50], EntitySheep['Sheep'/151, l='MpServer', x=-284.03, y=67.00, z=264.97], EntitySheep['Sheep'/152, l='MpServer', x=-278.41, y=65.00, z=261.06], EntityCreeper['Creeper'/153, l='MpServer', x=-275.50, y=36.00, z=281.50], EntityCreeper['Creeper'/154, l='MpServer', x=-272.94, y=30.00, z=294.34], EntityVillager['Villager'/162, l='MpServer', x=-264.72, y=68.00, z=218.69], EntityXPOrb['Experience Orb'/163, l='MpServer', x=-266.63, y=67.00, z=227.59], EntityXPOrb['Experience Orb'/164, l='MpServer', x=-267.13, y=68.00, z=225.19], EntityBat['Bat'/1188, l='MpServer', x=-282.24, y=16.97, z=203.46], EntityXPOrb['Experience Orb'/165, l='MpServer', x=-269.75, y=67.00, z=228.06], EntitySheep['Sheep'/166, l='MpServer', x=-260.88, y=64.00, z=254.03], EntitySheep['Sheep'/168, l='MpServer', x=-262.44, y=69.00, z=296.06], EntitySheep['Sheep'/169, l='MpServer', x=-268.88, y=68.00, z=293.59], EntitySheep['Sheep'/170, l='MpServer', x=-271.38, y=68.00, z=296.53], EntityPig['Pig'/178, l='MpServer', x=-241.06, y=62.53, z=179.31], EntityWitch['Witch'/179, l='MpServer', x=-247.50, y=19.00, z=242.50], EntitySheep['Sheep'/180, l='MpServer', x=-251.06, y=68.00, z=259.91], EntityPlayerSP['Player857'/307, l='MpServer', x=-261.29, y=68.00, z=218.50], EntitySkeleton['Skeleton'/700, l='MpServer', x=-190.50, y=48.00, z=294.50], EntityPig['Pig'/192, l='MpServer', x=-239.69, y=62.41, z=177.31], EntitySheep['Sheep'/193, l='MpServer', x=-224.97, y=72.00, z=208.94], EntitySheep['Sheep'/194, l='MpServer', x=-233.56, y=66.00, z=285.72], EntitySheep['Sheep'/195, l='MpServer', x=-221.16, y=67.00, z=283.31], EntitySheep['Sheep'/197, l='MpServer', x=-231.97, y=65.00, z=294.06], EntitySheep['Sheep'/198, l='MpServer', x=-236.28, y=65.00, z=291.91], EntitySheep['Sheep'/201, l='MpServer', x=-235.16, y=65.00, z=292.09], EntityRabbit['Rabbit'/202, l='MpServer', x=-243.91, y=65.00, z=297.47], EntityZombie['Zombie'/213, l='MpServer', x=-209.50, y=57.00, z=293.50], EntitySheep['Sheep'/219, l='MpServer', x=-206.63, y=75.00, z=201.44], EntitySheep['Sheep'/220, l='MpServer', x=-204.00, y=76.00, z=197.97], EntityZombie['Zombie'/221, l='MpServer', x=-195.38, y=56.00, z=271.03], EntityZombie['Zombie'/733, l='MpServer', x=-190.53, y=54.00, z=267.22], EntitySheep['Sheep'/223, l='MpServer', x=-184.06, y=72.00, z=205.94], EntitySheep['Sheep'/224, l='MpServer', x=-183.22, y=76.00, z=214.47], EntityCreeper['Creeper'/226, l='MpServer', x=-196.63, y=48.00, z=284.06], EntitySheep['Sheep'/101, l='MpServer', x=-339.47, y=84.00, z=227.50], EntitySheep['Sheep'/102, l='MpServer', x=-340.56, y=84.00, z=227.50], EntitySheep['Sheep'/103, l='MpServer', x=-342.25, y=85.00, z=228.63], EntityZombie['Zombie'/104, l='MpServer', x=-340.50, y=56.00, z=254.50], EntitySheep['Sheep'/105, l='MpServer', x=-341.06, y=65.00, z=283.59], EntityZombie['Zombie'/496, l='MpServer', x=-327.50, y=15.00, z=297.50], EntityCreeper['Creeper'/120, l='MpServer', x=-314.53, y=18.00, z=190.03], EntityCreeper['Creeper'/504, l='MpServer', x=-192.03, y=26.00, z=254.47], EntitySheep['Sheep'/121, l='MpServer', x=-332.59, y=71.00, z=269.31], EntityBat['Bat'/639, l='MpServer', x=-281.25, y=21.10, z=214.25]]
+	Retry entities: 0 total; []
+	Server brand: fml,forge
+	Server type: Integrated singleplayer server
+Stacktrace:
+	at net.minecraft.client.multiplayer.WorldClient.addWorldInfoToCrashReport(WorldClient.java:383)
+	at net.minecraft.client.Minecraft.addGraphicsAndWorldToCrashReport(Minecraft.java:2645)
+	at net.minecraft.client.Minecraft.run(Minecraft.java:409)
+	at net.minecraft.client.main.Main.main(Main.java:116)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at net.minecraft.launchwrapper.Launch.launch(Launch.java:135)
+	at net.minecraft.launchwrapper.Launch.main(Launch.java:28)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at net.minecraftforge.gradle.GradleStartCommon.launch(GradleStartCommon.java:97)
+	at GradleStart.main(GradleStart.java:26)
+
+-- System Details --
+Details:
+	Minecraft Version: 1.8.9
+	Operating System: Windows 10 (amd64) version 10.0
+	Java Version: 1.8.0_201, Oracle Corporation
+	Java VM Version: Java HotSpot(TM) 64-Bit Server VM (mixed mode), Oracle Corporation
+	Memory: 264576232 bytes (252 MB) / 1687158784 bytes (1609 MB) up to 3810525184 bytes (3634 MB)
+	JVM Flags: 0 total; 
+	IntCache: cache: 6, tcache: 65, allocated: 13, tallocated: 95
+	FML: MCP 9.19 Powered by Forge 11.15.1.2318 4 mods loaded, 4 mods active
+	States: 'U' = Unloaded 'L' = Loaded 'C' = Constructed 'H' = Pre-initialized 'I' = Initialized 'J' = Post-initialized 'A' = Available 'D' = Disabled 'E' = Errored
+	UCHIJAAAA	mcp{9.19} [Minecraft Coder Pack] (minecraft.jar) 
+	UCHIJAAAA	FML{8.0.99.99} [Forge Mod Loader] (forgeSrc-1.8.9-11.15.1.2318-1.8.9.jar) 
+	UCHIJAAAA	Forge{11.15.1.2318} [Minecraft Forge] (forgeSrc-1.8.9-11.15.1.2318-1.8.9.jar) 
+	UCHIJAAAA	NoobTeam{0.1} [NoobTeam] (modid-1.0.jar) 
+	Loaded coremods (and transformers): 
+	GL info: ' Vendor: 'NVIDIA Corporation' Version: '4.6.0 NVIDIA 456.71' Renderer: 'GeForce GTX 1050 Ti/PCIe/SSE2'
+	Launched Version: 1.8.9
+	LWJGL: 2.9.4
+	OpenGL: GeForce GTX 1050 Ti/PCIe/SSE2 GL version 4.6.0 NVIDIA 456.71, NVIDIA Corporation
+	GL Caps: Using GL 1.3 multitexturing.
+Using GL 1.3 texture combiners.
+Using framebuffer objects because OpenGL 3.0 is supported and separate blending is supported.
+Shaders are available because OpenGL 2.1 is supported.
+VBOs are available because OpenGL 1.5 is supported.
+
+	Using VBOs: No
+	Is Modded: Definitely; Client brand changed to 'fml,forge'
+	Type: Client (map_client.txt)
+	Resource Packs: 
+	Current Language: English (US)
+	Profiler Position: N/A (disabled)
+	CPU: 6x Intel(R) Core(TM) i5-9400F CPU @ 2.90GHz

@@ -1,0 +1,136 @@
+---- Minecraft Crash Report ----
+// Don't do that.
+
+Time: 08/08/22 03:36
+Description: Ticking entity
+
+java.lang.NullPointerException: Ticking entity
+	at net.minecraft.world.World.isValid(World.java:241)
+	at net.minecraft.world.World.getBlockState(World.java:885)
+	at noob.NoobTeam.modules.player.SpeedMine.onUpdate(SpeedMine.java:64)
+	at net.minecraftforge.fml.common.eventhandler.ASMEventHandler_10_SpeedMine_onUpdate_PlayerTickEvent.invoke(.dynamic)
+	at net.minecraftforge.fml.common.eventhandler.ASMEventHandler.invoke(ASMEventHandler.java:49)
+	at net.minecraftforge.fml.common.eventhandler.EventBus.post(EventBus.java:140)
+	at net.minecraftforge.fml.common.FMLCommonHandler.onPlayerPreTick(FMLCommonHandler.java:352)
+	at net.minecraft.entity.player.EntityPlayer.onUpdate(EntityPlayer.java:248)
+	at net.minecraft.client.entity.EntityPlayerSP.onUpdate(EntityPlayerSP.java:163)
+	at net.minecraft.world.World.updateEntityWithOptionalForce(World.java:2011)
+	at net.minecraft.world.World.updateEntity(World.java:1976)
+	at net.minecraft.world.World.updateEntities(World.java:1805)
+	at net.minecraft.client.Minecraft.runTick(Minecraft.java:2176)
+	at net.minecraft.client.Minecraft.runGameLoop(Minecraft.java:1080)
+	at net.minecraft.client.Minecraft.run(Minecraft.java:380)
+	at net.minecraft.client.main.Main.main(Main.java:116)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at net.minecraft.launchwrapper.Launch.launch(Launch.java:135)
+	at net.minecraft.launchwrapper.Launch.main(Launch.java:28)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at net.minecraftforge.gradle.GradleStartCommon.launch(GradleStartCommon.java:97)
+	at GradleStart.main(GradleStart.java:26)
+
+
+A detailed walkthrough of the error, its code path and all known details is as follows:
+---------------------------------------------------------------------------------------
+
+-- Head --
+Stacktrace:
+	at net.minecraft.world.World.isValid(World.java:241)
+	at net.minecraft.world.World.getBlockState(World.java:885)
+	at noob.NoobTeam.modules.player.SpeedMine.onUpdate(SpeedMine.java:64)
+	at net.minecraftforge.fml.common.eventhandler.ASMEventHandler_10_SpeedMine_onUpdate_PlayerTickEvent.invoke(.dynamic)
+	at net.minecraftforge.fml.common.eventhandler.ASMEventHandler.invoke(ASMEventHandler.java:49)
+	at net.minecraftforge.fml.common.eventhandler.EventBus.post(EventBus.java:140)
+	at net.minecraftforge.fml.common.FMLCommonHandler.onPlayerPreTick(FMLCommonHandler.java:352)
+	at net.minecraft.entity.player.EntityPlayer.onUpdate(EntityPlayer.java:248)
+	at net.minecraft.client.entity.EntityPlayerSP.onUpdate(EntityPlayerSP.java:163)
+	at net.minecraft.world.World.updateEntityWithOptionalForce(World.java:2011)
+	at net.minecraft.world.World.updateEntity(World.java:1976)
+
+-- Entity being ticked --
+Details:
+	Entity Type: null (net.minecraft.client.entity.EntityPlayerSP)
+	Entity ID: 211
+	Entity Name: Player323
+	Entity's Exact location: -257.47, 63.00, 251.52
+	Entity's Block location: -258.00,63.00,251.00 - World: (-258,63,251), Chunk: (at 14,3,11 in -17,15; contains blocks -272,0,240 to -257,255,255), Region: (-1,0; contains chunks -32,0 to -1,31, blocks -512,0,0 to -1,255,511)
+	Entity's Momentum: -0.08, -0.08, -0.04
+	Entity's Rider: ~~ERROR~~ NullPointerException: null
+	Entity's Vehicle: ~~ERROR~~ NullPointerException: null
+Stacktrace:
+	at net.minecraft.world.World.updateEntities(World.java:1805)
+
+-- Affected level --
+Details:
+	Level name: MpServer
+	All players: 1 total; [EntityPlayerSP['Player323'/211, l='MpServer', x=-257.47, y=63.00, z=251.52]]
+	Chunk stats: MultiplayerChunkCache: 169, 169
+	Level seed: 0
+	Level generator: ID 00 - default, ver 1. Features enabled: false
+	Level generator options: 
+	Level spawn location: -248.00,64.00,244.00 - World: (-248,64,244), Chunk: (at 8,4,4 in -16,15; contains blocks -256,0,240 to -241,255,255), Region: (-1,0; contains chunks -32,0 to -1,31, blocks -512,0,0 to -1,255,511)
+	Level time: 127196 game time, 103933 day time
+	Level dimension: 0
+	Level storage version: 0x00000 - Unknown?
+	Level weather: Rain time: 0 (now: false), thunder time: 0 (now: false)
+	Level game mode: Game mode: survival (ID 0). Hardcore: false. Cheats: false
+	Forced entities: 53 total; [EntitySheep['Sheep'/132, l='MpServer', x=-217.75, y=72.00, z=199.09], EntitySheep['Sheep'/133, l='MpServer', x=-217.03, y=69.00, z=241.97], EntitySheep['Sheep'/134, l='MpServer', x=-207.56, y=65.00, z=293.31], EntityBat['Bat'/139, l='MpServer', x=-210.53, y=54.16, z=300.28], EntityRabbit['Rabbit'/140, l='MpServer', x=-207.28, y=65.00, z=292.00], EntitySheep['Sheep'/142, l='MpServer', x=-195.44, y=79.00, z=181.13], EntitySheep['Sheep'/143, l='MpServer', x=-186.94, y=79.00, z=196.06], EntitySheep['Sheep'/144, l='MpServer', x=-184.53, y=72.00, z=202.19], EntitySheep['Sheep'/145, l='MpServer', x=-179.88, y=72.00, z=223.84], EntitySheep['Sheep'/146, l='MpServer', x=-179.03, y=71.00, z=261.00], EntityPig['Pig'/148, l='MpServer', x=-198.97, y=64.00, z=311.00], EntityPlayerSP['Player323'/211, l='MpServer', x=-257.47, y=63.00, z=251.52], EntityItem['item.item.clay'/10275, l='MpServer', x=-260.88, y=66.00, z=227.19], EntityItem['item.tile.dirt.default'/14244, l='MpServer', x=-254.28, y=63.00, z=243.19], EntityBat['Bat'/10661, l='MpServer', x=-259.41, y=45.01, z=318.31], EntityBat['Bat'/15784, l='MpServer', x=-200.49, y=16.00, z=309.42], EntityBat['Bat'/308, l='MpServer', x=-298.25, y=17.00, z=300.25], EntityItem['item.tile.dirt.default'/15286, l='MpServer', x=-253.13, y=63.00, z=247.77], EntityItem['item.tile.dirt.default'/14668, l='MpServer', x=-254.22, y=63.00, z=244.75], EntityBat['Bat'/334, l='MpServer', x=-220.75, y=27.04, z=293.03], EntityItem['item.item.clay'/9681, l='MpServer', x=-253.28, y=64.00, z=220.13], EntitySheep['Sheep'/85, l='MpServer', x=-301.59, y=71.00, z=291.66], EntitySheep['Sheep'/87, l='MpServer', x=-296.53, y=66.00, z=251.63], EntitySheep['Sheep'/88, l='MpServer', x=-293.06, y=65.00, z=269.94], EntitySheep['Sheep'/89, l='MpServer', x=-289.44, y=71.00, z=296.31], EntityPig['Pig'/90, l='MpServer', x=-288.56, y=61.00, z=322.66], EntitySheep['Sheep'/94, l='MpServer', x=-287.06, y=65.00, z=194.13], EntitySheep['Sheep'/95, l='MpServer', x=-279.47, y=68.00, z=253.06], EntityItem['item.item.clay'/9311, l='MpServer', x=-254.31, y=64.00, z=220.13], EntitySheep['Sheep'/96, l='MpServer', x=-287.88, y=66.00, z=262.09], EntitySheep['Sheep'/97, l='MpServer', x=-281.97, y=70.00, z=283.97], EntityPig['Pig'/98, l='MpServer', x=-286.16, y=70.00, z=292.88], EntityItem['item.tile.dirt.default'/14946, l='MpServer', x=-253.13, y=63.00, z=246.88], EntitySheep['Sheep'/99, l='MpServer', x=-280.88, y=70.00, z=288.03], EntityBat['Bat'/100, l='MpServer', x=-266.22, y=12.09, z=329.41], EntitySheep['Sheep'/102, l='MpServer', x=-265.91, y=67.00, z=250.38], EntitySheep['Sheep'/103, l='MpServer', x=-263.56, y=65.00, z=281.34], EntitySheep['Sheep'/104, l='MpServer', x=-266.00, y=68.00, z=303.97], EntityPig['Pig'/105, l='MpServer', x=-268.47, y=72.00, z=323.66], EntityPig['Pig'/110, l='MpServer', x=-246.34, y=62.06, z=177.72], EntitySheep['Sheep'/111, l='MpServer', x=-247.69, y=66.00, z=296.41], EntityRabbit['Rabbit'/112, l='MpServer', x=-249.91, y=64.00, z=284.91], EntitySheep['Sheep'/113, l='MpServer', x=-249.19, y=69.00, z=308.09], EntityItem['item.tile.dirt.default'/15857, l='MpServer', x=-254.59, y=63.71, z=249.38], EntitySheep['Sheep'/114, l='MpServer', x=-250.69, y=71.00, z=308.44], EntityRabbit['Rabbit'/115, l='MpServer', x=-251.91, y=70.00, z=319.50], EntityItem['item.item.clay'/10359, l='MpServer', x=-261.16, y=67.00, z=227.56], EntitySheep['Sheep'/121, l='MpServer', x=-227.16, y=67.00, z=283.94], EntitySheep['Sheep'/122, l='MpServer', x=-228.75, y=65.00, z=296.31], EntitySheep['Sheep'/123, l='MpServer', x=-231.91, y=65.00, z=291.91], EntitySheep['Sheep'/124, l='MpServer', x=-238.03, y=64.00, z=313.00], EntityPig['Pig'/125, l='MpServer', x=-227.88, y=64.00, z=314.97], EntityPig['Pig'/126, l='MpServer', x=-233.94, y=71.00, z=325.16]]
+	Retry entities: 0 total; []
+	Server brand: fml,forge
+	Server type: Integrated singleplayer server
+Stacktrace:
+	at net.minecraft.client.multiplayer.WorldClient.addWorldInfoToCrashReport(WorldClient.java:383)
+	at net.minecraft.client.Minecraft.addGraphicsAndWorldToCrashReport(Minecraft.java:2645)
+	at net.minecraft.client.Minecraft.run(Minecraft.java:401)
+	at net.minecraft.client.main.Main.main(Main.java:116)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at net.minecraft.launchwrapper.Launch.launch(Launch.java:135)
+	at net.minecraft.launchwrapper.Launch.main(Launch.java:28)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at net.minecraftforge.gradle.GradleStartCommon.launch(GradleStartCommon.java:97)
+	at GradleStart.main(GradleStart.java:26)
+
+-- System Details --
+Details:
+	Minecraft Version: 1.8.9
+	Operating System: Windows 10 (amd64) version 10.0
+	Java Version: 1.8.0_201, Oracle Corporation
+	Java VM Version: Java HotSpot(TM) 64-Bit Server VM (mixed mode), Oracle Corporation
+	Memory: 860846144 bytes (820 MB) / 1568145408 bytes (1495 MB) up to 3810525184 bytes (3634 MB)
+	JVM Flags: 0 total; 
+	IntCache: cache: 0, tcache: 0, allocated: 13, tallocated: 95
+	FML: MCP 9.19 Powered by Forge 11.15.1.2318 4 mods loaded, 4 mods active
+	States: 'U' = Unloaded 'L' = Loaded 'C' = Constructed 'H' = Pre-initialized 'I' = Initialized 'J' = Post-initialized 'A' = Available 'D' = Disabled 'E' = Errored
+	UCHIJAAAA	mcp{9.19} [Minecraft Coder Pack] (minecraft.jar) 
+	UCHIJAAAA	FML{8.0.99.99} [Forge Mod Loader] (forgeSrc-1.8.9-11.15.1.2318-1.8.9.jar) 
+	UCHIJAAAA	Forge{11.15.1.2318} [Minecraft Forge] (forgeSrc-1.8.9-11.15.1.2318-1.8.9.jar) 
+	UCHIJAAAA	NoobTeam{0.1} [NoobTeam] (noobTeam.main) 
+	Loaded coremods (and transformers): 
+	GL info: ' Vendor: 'NVIDIA Corporation' Version: '4.6.0 NVIDIA 456.71' Renderer: 'GeForce GTX 1050 Ti/PCIe/SSE2'
+	Launched Version: 1.8.9
+	LWJGL: 2.9.4
+	OpenGL: GeForce GTX 1050 Ti/PCIe/SSE2 GL version 4.6.0 NVIDIA 456.71, NVIDIA Corporation
+	GL Caps: Using GL 1.3 multitexturing.
+Using GL 1.3 texture combiners.
+Using framebuffer objects because OpenGL 3.0 is supported and separate blending is supported.
+Shaders are available because OpenGL 2.1 is supported.
+VBOs are available because OpenGL 1.5 is supported.
+
+	Using VBOs: No
+	Is Modded: Definitely; Client brand changed to 'fml,forge'
+	Type: Client (map_client.txt)
+	Resource Packs: 
+	Current Language: English (US)
+	Profiler Position: N/A (disabled)
+	CPU: 6x Intel(R) Core(TM) i5-9400F CPU @ 2.90GHz

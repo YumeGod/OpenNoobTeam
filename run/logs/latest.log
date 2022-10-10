@@ -1,0 +1,41 @@
+[21:43:45] [Client thread/INFO]: Setting user: Player489
+[21:43:47] [Client thread/INFO]: LWJGL Version: 2.9.4
+[21:43:49] [Client thread/INFO]: Reloading ResourceManager: Default, FMLFileResourcePack:Forge Mod Loader, FMLFileResourcePack:Minecraft Forge, FMLFileResourcePack:NoobTeam
+[21:43:50] [Sound Library Loader/INFO]: Starting up SoundSystem...
+[21:43:50] [Thread-11/INFO]: Initializing LWJGL OpenAL
+[21:43:50] [Thread-11/INFO]: (The LWJGL binding of OpenAL.  For more information, see http://www.lwjgl.org)
+[21:43:50] [Thread-11/INFO]: OpenAL initialized.
+[21:43:51] [Sound Library Loader/INFO]: Sound engine started
+[21:43:54] [Client thread/INFO]: Created: 16x16 textures-atlas
+[21:43:55] [Client thread/INFO]: Reloading ResourceManager: Default, FMLFileResourcePack:Forge Mod Loader, FMLFileResourcePack:Minecraft Forge, FMLFileResourcePack:NoobTeam
+[21:43:55] [Client thread/INFO]: SoundSystem shutting down...
+[21:43:55] [Client thread/WARN]: Author: Paul Lamb, www.paulscode.com
+[21:43:55] [Sound Library Loader/INFO]: Starting up SoundSystem...
+[21:43:55] [Thread-13/INFO]: Initializing LWJGL OpenAL
+[21:43:55] [Thread-13/INFO]: (The LWJGL binding of OpenAL.  For more information, see http://www.lwjgl.org)
+[21:43:55] [Thread-13/INFO]: OpenAL initialized.
+[21:43:55] [Sound Library Loader/INFO]: Sound engine started
+[21:43:58] [Client thread/INFO]: Created: 512x512 textures-atlas
+[21:44:02] [Server thread/INFO]: Starting integrated minecraft server version 1.8.9
+[21:44:02] [Server thread/INFO]: Generating keypair
+[21:44:02] [Server thread/INFO]: Preparing start region for level 0
+[21:44:03] [Server thread/INFO]: Changing view distance to 6, from 10
+[21:44:05] [Server thread/INFO]: Player489[local:E:b305fd1f] logged in with entity id 228 at (-265.4568061309897, 68.0, 214.32072588344911)
+[21:44:05] [Server thread/INFO]: Player489 joined the game
+[21:44:07] [Client thread/INFO]: [CHAT] [NoobTeam] HUD Enabled!
+[21:44:10] [Client thread/INFO]: [CHAT] [NoobTeam] ClickGui Enabled!
+[21:44:10] [Client thread/INFO]: [CHAT] An unknown error occurred while attempting to perform this command
+[21:44:11] [Client thread/INFO]: [CHAT] [NoobTeam] Sprint Enabled!
+[21:44:58] [Server thread/INFO]: Saving and pausing game...
+[21:44:58] [Server thread/INFO]: Saving chunks for level 'ncp world'/Overworld
+[21:44:58] [Server thread/INFO]: Saving chunks for level 'ncp world'/Nether
+[21:44:58] [Server thread/INFO]: Saving chunks for level 'ncp world'/The End
+[21:44:58] [Server thread/INFO]: Stopping server
+[21:44:58] [Server thread/INFO]: Saving players
+[21:44:58] [Server thread/INFO]: Saving worlds
+[21:44:58] [Server thread/INFO]: Saving chunks for level 'ncp world'/Overworld
+[21:44:58] [Server thread/INFO]: Saving chunks for level 'ncp world'/Nether
+[21:44:58] [Server thread/INFO]: Saving chunks for level 'ncp world'/The End
+[21:44:59] [Client thread/INFO]: Stopping!
+[21:44:59] [Client thread/INFO]: SoundSystem shutting down...
+[21:44:59] [Client thread/WARN]: Author: Paul Lamb, www.paulscode.com
